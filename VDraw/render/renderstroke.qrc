@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="RenderStroke">
+    <file>Resources/zoom-in-7.png</file>
+    <file>Resources/zoom-original-5.png</file>
+    <file>Resources/zoom-out-7.png</file>
+    <file>Resources/edit-clear-2.png</file>
+    <file>Resources/media-playback-start-3.png</file>
+  </qresource>
+</RCC>

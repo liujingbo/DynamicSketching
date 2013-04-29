@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RenderStrokeClass</class>
+ <widget class="QMainWindow" name="RenderStrokeClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1038</width>
+    <height>492</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RenderStroke</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea_strokeInput">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>413</width>
+         <height>408</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="0">
+         <widget class="StrokeInputWidget" name="strokeInput" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QScrollArea" name="scrollArea_strokeDisplay">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>413</width>
+         <height>408</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <widget class="StrokeDisplayWidget" name="strokeDisplay" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1038</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Stroke"/>
+    <addaction name="actionOpen_Pencil_Texture"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionStroke_Animation"/>
+    <addaction name="actionClear_Strokes"/>
+    <addaction name="actionZoom_In"/>
+    <addaction name="actionZoom_Out"/>
+    <addaction name="actionZoom_Original"/>
+   </widget>
+   <widget class="QMenu" name="menuStroke_Type">
+    <property name="title">
+     <string>Stroke Type</string>
+    </property>
+    <addaction name="actionType_1"/>
+    <addaction name="actionType_2"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuStroke_Type"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionStroke_Animation"/>
+   <addaction name="actionClear_Strokes"/>
+   <addaction name="actionZoom_In"/>
+   <addaction name="actionZoom_Out"/>
+   <addaction name="actionZoom_Original"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget_controlPanel">
+   <property name="minimumSize">
+    <size>
+     <width>180</width>
+     <height>38</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>180</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>171</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Animation</string>
+     </property>
+     <widget class="QSlider" name="horizontalSlider_animationSpeed">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>111</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>20</y>
+        <width>30</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Speed</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <action name="actionOpen_Stroke">
+   <property name="text">
+    <string>Open Stroke</string>
+   </property>
+  </action>
+  <action name="actionStroke_Animation">
+   <property name="text">
+    <string>Stroke Animation</string>
+   </property>
+  </action>
+  <action name="actionClear_Strokes">
+   <property name="text">
+    <string>Clear Strokes</string>
+   </property>
+  </action>
+  <action name="actionType_1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Type 1</string>
+   </property>
+  </action>
+  <action name="actionType_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Type 2</string>
+   </property>
+  </action>
+  <action name="actionZoom_In">
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionZoom_Original">
+   <property name="text">
+    <string>Zoom Original</string>
+   </property>
+  </action>
+  <action name="actionOpen_Pencil_Texture">
+   <property name="text">
+    <string>Open Pencil Texture</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>StrokeDisplayWidget</class>
+   <extends>QWidget</extends>
+   <header>strokedisplaywidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StrokeInputWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">strokeinputwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="renderstroke.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionOpen_Stroke</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>OpenStroke()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionStroke_Animation</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>StrokeAnimation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_Strokes</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>ClearStrokes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_animationSpeed</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>ChangeAnimationSpeed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>631</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionType_1</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>ChangeStrokeType1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionType_2</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>ChangeStrokeType2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionZoom_In</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>ZoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionZoom_Out</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>ZoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionZoom_Original</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>ZoomOriginal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen_Pencil_Texture</sender>
+   <signal>triggered()</signal>
+   <receiver>RenderStrokeClass</receiver>
+   <slot>OpenPencilTexture()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OpenStroke()</slot>
+  <slot>StrokeAnimation()</slot>
+  <slot>ClearStrokes()</slot>
+  <slot>ChangeAnimationSpeed(int)</slot>
+  <slot>ChangeStrokeType1()</slot>
+  <slot>ChangeStrokeType2()</slot>
+  <slot>ZoomIn()</slot>
+  <slot>ZoomOut()</slot>
+  <slot>ZoomOriginal()</slot>
+  <slot>OpenPencilTexture()</slot>
+ </slots>
+</ui>

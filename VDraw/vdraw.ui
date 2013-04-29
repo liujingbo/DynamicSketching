@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VDrawClass</class>
+ <widget class="QMainWindow" name="VDrawClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1101</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>VDraw</string>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AnimatedDocks|QMainWindow::ForceTabbedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <widget class="QWidget" name="backgroud_widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>1000</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QSplitter" name="splitter">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="opaqueResize">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="left_panel_widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>0</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QTabWidget" name="left_panel_tab">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>50</horstretch>
+               <verstretch>50</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab_gl">
+              <attribute name="title">
+               <string>Tab 1</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="0">
+                <widget class="QScrollArea" name="scrollArea">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOn</enum>
+                 </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOn</enum>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                 </property>
+                 <widget class="GLWidget" name="gl_widget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>693</width>
+                    <height>500</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>500</width>
+                    <height>500</height>
+                   </size>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_gl2">
+              <attribute name="title">
+               <string>Tab 2</string>
+              </attribute>
+              <widget class="QScrollArea" name="scrollArea_2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>500</width>
+                 <height>500</height>
+                </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>500</width>
+                 <height>500</height>
+                </size>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="GLWidget" name="gl_widget2">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>498</width>
+                  <height>498</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="right_panel_widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="render_label">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>50</horstretch>
+               <verstretch>50</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>500</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QGroupBox" name="testing_zone">
+      <property name="title">
+       <string>vZone</string>
+      </property>
+      <widget class="QListWidget" name="output_list">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>371</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="testParaName">
+       <property name="geometry">
+        <rect>
+         <x>412</x>
+         <y>22</y>
+         <width>104</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>None</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>connect_dist</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>connect_angle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Splitting Chains</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Show Curvature</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QSlider" name="testParaValue">
+       <property name="geometry">
+        <rect>
+         <x>522</x>
+         <y>22</y>
+         <width>211</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="checking_zone">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>40</y>
+         <width>371</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Checking Zone</string>
+       </property>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>20</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>S.C.</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkPrims">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>20</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Prims</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_3">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>20</y>
+          <width>81</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>First Sketch</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkPose">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>21</y>
+          <width>46</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pose</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkSimLines">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>63</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>SimLines</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>30</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Order</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="horizontalSlider">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>60</y>
+         <width>160</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_mesh"/>
+    <addaction name="actionLoad_segmentation"/>
+   </widget>
+   <widget class="QMenu" name="menuRender">
+    <property name="title">
+     <string>Render</string>
+    </property>
+    <addaction name="actionDepth_Buffer"/>
+    <addaction name="actionStart"/>
+    <addaction name="actionTextured_Rendering"/>
+   </widget>
+   <widget class="QMenu" name="menuFilter">
+    <property name="title">
+     <string>Filter</string>
+    </property>
+    <addaction name="actionCanny"/>
+    <addaction name="actionHough_Transform"/>
+   </widget>
+   <widget class="QMenu" name="menuGL">
+    <property name="title">
+     <string>GL</string>
+    </property>
+    <widget class="QMenu" name="menuEffects">
+     <property name="title">
+      <string>effects</string>
+     </property>
+     <addaction name="actionContour"/>
+     <addaction name="actionSuggestive_Contour"/>
+     <addaction name="actionDiffuse"/>
+     <addaction name="actionSegmentation"/>
+     <addaction name="actionPrimitive_fitting"/>
+    </widget>
+    <addaction name="menuEffects"/>
+   </widget>
+   <widget class="QMenu" name="menuStella">
+    <property name="title">
+     <string>Stella</string>
+    </property>
+    <addaction name="actionStella_Prepare"/>
+    <addaction name="stellaStartItem"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuGL"/>
+   <addaction name="menuRender"/>
+   <addaction name="menuFilter"/>
+   <addaction name="menuStella"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="minimumSize">
+    <size>
+     <width>550</width>
+     <height>550</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>900</width>
+     <height>700</height>
+    </size>
+   </property>
+   <property name="floating">
+    <bool>true</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="0" column="0">
+      <widget class="StellaWidget" name="stellaWidget" native="true"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionLoad_mesh">
+   <property name="text">
+    <string>Load mesh</string>
+   </property>
+  </action>
+  <action name="actionDepth_Buffer">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Depth Buffer</string>
+   </property>
+  </action>
+  <action name="actionCanny">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Canny</string>
+   </property>
+  </action>
+  <action name="actionHough_Transform">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hough Transform</string>
+   </property>
+  </action>
+  <action name="actionContour">
+   <property name="text">
+    <string>Contour</string>
+   </property>
+  </action>
+  <action name="actionSuggestive_Contour">
+   <property name="text">
+    <string>Suggestive Contour</string>
+   </property>
+  </action>
+  <action name="actionDiffuse">
+   <property name="text">
+    <string>Diffuse</string>
+   </property>
+  </action>
+  <action name="actionSegmentation">
+   <property name="text">
+    <string>Segmentation</string>
+   </property>
+  </action>
+  <action name="actionPrimitive_fitting">
+   <property name="text">
+    <string>Primitive fitting</string>
+   </property>
+  </action>
+  <action name="actionLoad_segmentation">
+   <property name="text">
+    <string>Load segmentation</string>
+   </property>
+  </action>
+  <action name="actionStella_Prepare">
+   <property name="text">
+    <string>Stella Prepare</string>
+   </property>
+  </action>
+  <action name="stellaStartItem">
+   <property name="text">
+    <string>Stella Start</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionTextured_Rendering">
+   <property name="text">
+    <string>Textured Rendering</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header>glwidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>glRepaint()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>StellaWidget</class>
+   <extends>QWidget</extends>
+   <header>stellawidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="vdraw.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionLoad_mesh</sender>
+   <signal>activated()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>loadTriMesh()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>263</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDepth_Buffer</sender>
+   <signal>activated()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>renderDepthBuffer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCanny</sender>
+   <signal>activated()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>filterCanny()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>649</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHough_Transform</sender>
+   <signal>activated()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>filterHough()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>649</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>testParaName</sender>
+   <signal>activated(QString)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>paraNameChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>496</x>
+     <y>576</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>700</x>
+     <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>testParaValue</sender>
+   <signal>actionTriggered(int)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>paraValChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>630</x>
+     <y>570</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>605</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkSimLines</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>showSimLine(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>619</x>
+     <y>624</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkPose</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>showPoseLine(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>449</x>
+     <y>617</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>453</x>
+     <y>679</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoad_segmentation</sender>
+   <signal>activated()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>loadSegmentation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>showSCLines(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>720</x>
+     <y>616</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>730</x>
+     <y>675</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>showConvexHull2D(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>559</x>
+     <y>624</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>595</x>
+     <y>679</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>orderCurves()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>899</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>899</x>
+     <y>675</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>strokeNumChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>970</x>
+     <y>622</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>965</x>
+     <y>672</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkPrims</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>showPrimLines(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>624</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>671</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stellaStartItem</sender>
+   <signal>triggered()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>setStella()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionStart</sender>
+   <signal>triggered()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>stratAnimateOrder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTextured_Rendering</sender>
+   <signal>activated()</signal>
+   <receiver>VDrawClass</receiver>
+   <slot>renderTextured()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>renderDepthBuffer()</slot>
+  <slot>catchGlRepaint()</slot>
+  <slot>filterCanny()</slot>
+  <slot>filterHough()</slot>
+  <slot>paraNameChanged(QString)</slot>
+  <slot>paraValChanged(int)</slot>
+  <slot>showSimLine(bool)</slot>
+  <slot>showPoseLine(bool)</slot>
+  <slot>loadTriMesh()</slot>
+  <slot>loadSegmentation()</slot>
+  <slot>showSCLines(bool)</slot>
+  <slot>showConvexHull2D(bool)</slot>
+  <slot>orderCurves()</slot>
+  <slot>strokeNumChanged(int)</slot>
+  <slot>showPrimLines(bool)</slot>
+  <slot>setStella()</slot>
+  <slot>stratAnimateOrder()</slot>
+  <slot>renderTextured()</slot>
+ </slots>
+</ui>

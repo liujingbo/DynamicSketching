@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{b6cfb6a6-e31c-42da-a07b-8c14abda0d56}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{1165e437-12e4-4e6c-8357-1333c882b832}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Files\drawers">
+      <UniqueIdentifier>{c6a94aca-eb37-43e8-a93d-0e3030da73fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\drawers">
+      <UniqueIdentifier>{bfa011bf-b2ea-454c-99b4-0e885f79ee1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vGraph">
+      <UniqueIdentifier>{ed199368-d2f7-4400-9692-ea050f0a6e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vGraph">
+      <UniqueIdentifier>{5bb3d898-774b-46c1-9f11-a4e622692650}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mesh">
+      <UniqueIdentifier>{c0af9113-f88e-4755-ae9e-0908df2917d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mesh">
+      <UniqueIdentifier>{ab40c2c4-95cb-4d6d-b3ec-d0ca555fcb64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vCanvas">
+      <UniqueIdentifier>{e3adfa2d-13c4-4858-8435-1b3b2c033e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vCanvas">
+      <UniqueIdentifier>{70184513-304e-4735-adce-b17f4ebd8b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\primitives">
+      <UniqueIdentifier>{dd36a405-bfd6-403b-a18a-3a342bc75c3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\render">
+      <UniqueIdentifier>{267d8e5a-0325-4774-8943-a7eee3f1bf10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render">
+      <UniqueIdentifier>{04c74afd-ead2-43c6-b11d-a0d3f5679e6c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vdraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_vdraw.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_vdraw.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_vdraw.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GLWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GLWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GLWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="math\eig3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\BaseDrawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\Drawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\EdgeContourDrawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\FaceContourDrawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\LineDrawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="PatchDrawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\SuggestiveContourDrawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimitiveDrawer.cpp">
+      <Filter>Source Files\drawers</Filter>
+    </ClCompile>
+    <ClCompile Include="ordering\vNode.cpp">
+      <Filter>Source Files\vGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ordering\vGraph.cpp">
+      <Filter>Source Files\vGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="fitting\FittingCylinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ordering\vEdge.cpp">
+      <Filter>Source Files\vGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\mesh_info.cc">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\Model.cpp">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_cpu\vertex_info.cc">
+      <Filter>Source Files\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="imageProc.cpp">
+      <Filter>Source Files\vCanvas</Filter>
+    </ClCompile>
+    <ClCompile Include="vCurve.cpp">
+      <Filter>Source Files\vCanvas</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_stellawidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_stellawidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ordering\vVirtualEdge.cpp">
+      <Filter>Source Files\vGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_renderstroke.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_renderstroke.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_strokedisplaywidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_strokedisplaywidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_strokeinputwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_strokeinputwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="render\strokeinputwidget.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\StrokeHandler.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\strokedisplaywidget.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\SomeClasses.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\renderstroke.cpp">
+      <Filter>Source Files\render</Filter>
+    </ClCompile>
+    <ClCompile Include="stellawidget.cpp">
+      <Filter>Source Files\vGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_testwind.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_testwind.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="testwind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="vdraw.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vdraw.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vdraw.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GLWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="render\renderstroke.h">
+      <Filter>Header Files\render</Filter>
+    </CustomBuild>
+    <CustomBuild Include="render\strokedisplaywidget.h">
+      <Filter>Header Files\render</Filter>
+    </CustomBuild>
+    <CustomBuild Include="render\strokeinputwidget.h">
+      <Filter>Header Files\render</Filter>
+    </CustomBuild>
+    <CustomBuild Include="stellawidget.h">
+      <Filter>Header Files\vGraph</Filter>
+    </CustomBuild>
+    <CustomBuild Include="testwind.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="render\renderstroke.ui">
+      <Filter>Header Files\mesh</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_vdraw.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="atlasIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fitting\FittingCylinder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="math\eig3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ordering\HierarchyGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\BaseDrawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\Drawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\EdgeContourDrawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\FaceContourDrawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\LineDrawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="PatchDrawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\SuggestiveContourDrawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimitiveDrawer.h">
+      <Filter>Header Files\drawers</Filter>
+    </ClInclude>
+    <ClInclude Include="ordering\vNode.h">
+      <Filter>Header Files\vGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ordering\vEdge.h">
+      <Filter>Header Files\vGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ordering\vGraph.h">
+      <Filter>Header Files\vGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\mesh_info.h">
+      <Filter>Header Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\Model.h">
+      <Filter>Header Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_cpu\vertex_info.h">
+      <Filter>Header Files\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="vCurve.h">
+      <Filter>Header Files\vCanvas</Filter>
+    </ClInclude>
+    <ClInclude Include="imageProc.h">
+      <Filter>Header Files\vCanvas</Filter>
+    </ClInclude>
+    <ClInclude Include="fitting\Primitives.h">
+      <Filter>Header Files\primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="ordering\vVirtualEdge.h">
+      <Filter>Header Files\vGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="render\SomeClasses.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\StrokeHandler.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_renderstroke.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="render\LinkLibs.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VDraw.rc" />
+  </ItemGroup>
+</Project>
